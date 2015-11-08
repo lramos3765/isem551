@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 
   <head>	
@@ -16,19 +16,21 @@
 			<a href="HW1.html" class="navbar-brand">My Blog</a>
 			<div class ="collapse navbar-collapse navHeaderCollapse">
 				<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="HW1.html" class="active" ng-click="active='home'">Home</a></li>
+						<li><a href="HW1.html" class="active" ng-click="active='home'">Home</a></li>
 						<li><a href="about.html" class="active" ng-click="active='about'">About</a></li>
-						<li><a href="contact.html" class="active" ng-click="active='contact'">Contact</a></li>
+						<li class="active"><a href="contact.html" class="active" ng-click="active='contact'">Contact</a></li>
 				</ul>
 				
 			</div>
 		</div>
 	</div>
+
+	<div >
+		<h2 class="jumbotron vertical-center" align="center">Thank you for checking out my blog! You can email me at ASRamos@my.harrisburgu.edu</h2>
+	</div>
 	<div ng-app=""  class="modal-dialog">
 		<div class="loginmodal-container">
-			<div>
-				<h2 class="jumbotron vertical-center" align="center">Do you want to request a topic for blog?</h2>
-			</div>
+			<h2><span class="label label-primary">You can subscribe by entering your information below</span></h3><br>
 			<form class="form-signin">
 				<div class="form-group">
 					<div class="input-group">
@@ -54,7 +56,7 @@
 				<div class="form-group">
 					<div class="input-group">
 						<div class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></div>
-						<textarea type="text" name="user" placeholder="write your topic and message here" required="" class="form-control input-lg" ng-model="message"></textarea>
+						<textarea type="text" name="user" placeholder="(Optional)write your message here" required="" class="form-control input-lg" ng-model="message"></textarea>
 					</div>
 				</div>
 
@@ -62,16 +64,17 @@
 		</div>
 
 		<hr/>
-		<h4>{{firstName}} {{lastName}} Requests:</h4>
-		<>{{message}}</p>
+		<h4>Your almost there {{firstName}} {{lastName}}. Please click button below to subscribe</h4>
+		<p>{{message}}</p>
 		<a class="navbar-button btn-primary btn" onclick="thankYou()">Submit</a>
 		<script>
 			function thankYou(){
-				alert("Thank you for your suggestion!");
+				alert("Thank you for subscribing!");
 			}
 		</script>
 	</div>
-
+	
   </body>
+  
 
 </html>
