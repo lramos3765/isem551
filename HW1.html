@@ -14,14 +14,18 @@
 			<a href="#" class="navbar-brand">My Blog</a>
 			<div class ="collapse navbar-collapse navHeaderCollapse">
 				<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Contact</a></li>
+						<li class="active"><a href="#" class="active" ng-click="active='home'">Home</a></li>
+						<li><a href="#" class="active" ng-click="active='about'">About</a></li>
+						<li><a href="#" class="active" ng-click="active='contact'">Contact</a></li>
 				</ul>
+				
 			</div>
 		</div>
+	</div>.
+	<div>
+	<p class="navbar-brand" ng-hide="active">Please click a menu item</p>
+	<p class="navbar-brand" ng-show="active">You chose <b>{{active}}</b></p>
 	</div>
-	
 	<div class="container">
 		<h3 class="navbar-text"><em>Hi my name is Laya. This is a simple website that I created for ISEM 551 homework 1. I can understand HTML but I'm not a front end developer. If you read this, please click the button below</em></h3>
 		<script>
