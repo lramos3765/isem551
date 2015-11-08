@@ -1,0 +1,79 @@
+ <!DOCTYPE html>
+<html>
+
+  <head>	
+	<title>ISEM 551 HW1</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="style_css.css"/>
+	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  </head>
+
+  <body>
+  
+	<div class="navbar navbar-inverse navbar-static-top"> 
+		<div class="container">
+			<a href="HW1.html" class="navbar-brand">My Blog</a>
+			<div class ="collapse navbar-collapse navHeaderCollapse">
+				<ul class="nav navbar-nav navbar-right">
+						<li><a href="HW1.html" class="active" ng-click="active='home'">Home</a></li>
+						<li><a href="about.html" class="active" ng-click="active='about'">About</a></li>
+						<li class="active"><a href="contact.html" class="active" ng-click="active='contact'">Contact</a></li>
+				</ul>
+				
+			</div>
+		</div>
+	</div>
+
+	<div >
+		<h2 class="jumbotron vertical-center" align="center">Thank you for checking out my blog! You can email me at ASRamos@my.harrisburgu.edu</h2>
+	</div>
+	<div ng-app=""  class="modal-dialog">
+		<div class="loginmodal-container">
+			<h2><span class="label label-primary">You can subscribe by entering your information below</span></h3><br>
+			<form class="form-signin">
+				<div class="form-group">
+					<div class="input-group">
+						<div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+						<input type="text" name="user" placeholder="First Name" required="" class="form-control input-lg" ng-model="firstName">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="input-group">
+						<div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+						<input type="text" name="user" placeholder="Last Name" required="" class="form-control input-lg" ng-model="lastName">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="input-group">
+						<div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
+						<input type="text" name="user" placeholder="Email" required="" class="form-control input-lg" ng-model="email">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="input-group">
+						<div class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></div>
+						<textarea type="text" name="user" placeholder="(Optional)write your message here" required="" class="form-control input-lg" ng-model="message"></textarea>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<hr/>
+		<h4>Your almost there {{firstName}} {{lastName}}. Please click button below to subscribe</h4>
+		<p>{{message}}</p>
+		<a class="navbar-button btn-primary btn" onclick="thankYou()">Submit</a>
+		<script>
+			function thankYou(){
+				alert("Thank you for subscribing!");
+			}
+		</script>
+	</div>
+	
+  </body>
+  
+
+</html>
